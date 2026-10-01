@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>زعفران | كافيه</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Aref+Ruqaa:wght@400;700&family=IBM+Plex+Sans+Arabic:wght@300;400;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --saffron:#F0A91B; --crocus:#4B2A6B; --crimson:#C2282F; --ink:#1E1226;
+  --bg:#F1ECF6; --text:#1E1226; --muted:#5d4d6b; --card:#fff; --line:#cdbfdc;
+  --disp:'Aref Ruqaa','Amiri','Traditional Arabic',serif;
+  --body:'IBM Plex Sans Arabic','Tajawal','Segoe UI',Tahoma,sans-serif;
+  box-sizing:border-box; padding-top:env(safe-area-inset-top,0px); padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#1E1226;--text:#F1ECF6;--muted:#b9a8c9;--card:#2a1a36;--line:#4a3860}}
+:root[data-theme="dark"]{--bg:#1E1226;--text:#F1ECF6;--muted:#b9a8c9;--card:#2a1a36;--line:#4a3860}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth;scroll-padding-top:70px}
+body{background:var(--bg);color:var(--text);font:400 1.05rem/1.9 var(--body)}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--crimson);outline-offset:3px}
+.wrap{max-width:1040px;margin:auto;padding:0 22px}
+header{position:sticky;top:0;z-index:5;background:var(--saffron);color:var(--ink);padding-top:env(safe-area-inset-top,0px)}
+header .wrap{display:flex;align-items:center;justify-content:space-between;height:60px}
+.logo{font:700 1.7rem var(--disp);text-decoration:none}
+nav{display:flex;gap:22px;font-size:.95rem;font-weight:600}
+nav a{text-decoration:none}nav a:hover{text-decoration:underline}
+@media(max-width:560px){nav a:nth-child(2){display:none}nav{gap:16px}}
+
+.hero{background:var(--saffron);color:var(--ink);text-align:center;padding:64px 0 96px;position:relative;overflow:hidden}
+.hero h1{font:700 clamp(6rem,26vw,15rem)/1 var(--disp);color:var(--crocus);letter-spacing:0}
+.hero p{font:400 clamp(1.1rem,3vw,1.45rem)/1.8 var(--body);max-width:30em;margin:8px auto 30px}
+.threads{position:absolute;inset-inline:0;bottom:0;width:100%;height:60px}
+.threads path{fill:none;stroke:var(--crimson);stroke-width:2.5;stroke-linecap:round;stroke-dasharray:900;stroke-dashoffset:900;animation:draw 2.4s ease-out .3s forwards}
+.threads path:nth-child(2){animation-delay:.6s}.threads path:nth-child(3){animation-delay:.9s}
+@keyframes draw{to{stroke-dashoffset:0}}
+.btn{display:inline-block;padding:13px 30px;border-radius:999px;font:600 1rem var(--body);text-decoration:none;border:2px solid var(--crocus);cursor:pointer}
+.btn.fill{background:var(--crocus);color:#fff}
+.btn.line{background:transparent;color:var(--crocus);margin-inline-start:10px}
+.btn:hover{background:var(--crimson);border-color:var(--crimson);color:#fff}
+
+section{padding:84px 0}
+h2{font:700 clamp(2rem,5vw,3rem)/1.3 var(--disp);color:var(--crocus);margin-bottom:10px}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) h2{color:var(--saffron)}}
+:root[data-theme="dark"] h2{color:var(--saffron)}
+.sub{color:var(--muted);max-width:34em;margin-bottom:30px}
+
+.tabs{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:26px}
+.tab{font:600 1rem var(--body);padding:9px 22px;border-radius:999px;border:2px solid var(--crocus);background:transparent;color:var(--text);cursor:pointer}
+.tab[aria-selected="true"]{background:var(--crocus);color:#fff}
+.menu{display:none;gap:0 56px;grid-template-columns:1fr 1fr}
+.menu.on{display:grid}
+@media(max-width:720px){.menu{grid-template-columns:1fr}}
+.item{padding:16px 0;border-bottom:1px solid var(--line)}
+.item .row{display:flex;align-items:baseline;gap:10px;font-weight:600}
+.item .row i{flex:1;border-bottom:2px dotted var(--line);transform:translateY(-5px)}
+.item .price{color:var(--crimson);font-weight:600;white-space:nowrap}
+:root[data-theme="dark"] .item .price{color:var(--saffron)}
+.item small{display:block;color:var(--muted);font-size:.92rem;line-height:1.7}
+
+.story{background:var(--crocus);color:#F1ECF6}
+.story h2{color:var(--saffron)}
+.story .cols{display:grid;grid-template-columns:1.1fr 1fr;gap:56px;align-items:center}
+@media(max-width:720px){.story .cols{grid-template-columns:1fr;gap:30px}}
+.story p+p{margin-top:14px}
+.quote{font:400 clamp(1.5rem,3.6vw,2.1rem)/1.7 var(--disp);border-inline-start:4px solid var(--saffron);padding-inline-start:22px}
+
+.info{display:grid;grid-template-columns:1fr 1fr;gap:28px}
+@media(max-width:720px){.info{grid-template-columns:1fr}}
+.card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:30px}
+.card h3{font:700 1.5rem var(--disp);color:var(--crimson);margin-bottom:8px}
+:root[data-theme="dark"] .card h3{color:var(--saffron)}
+.hours{display:flex;justify-content:space-between;padding:7px 0;border-bottom:1px dashed var(--line)}
+label{display:block;font-weight:600;margin:12px 0 4px;font-size:.95rem}
+input,select{width:100%;padding:11px 14px;border-radius:10px;border:1.5px solid var(--line);background:var(--bg);color:var(--text);font:inherit}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+#ok{margin-top:16px;font-weight:600;color:var(--crimson);min-height:1.6em}
+footer{background:var(--saffron);color:var(--ink);text-align:center;padding:36px 0 calc(36px + env(safe-area-inset-bottom,0px))}
+footer b{font:700 2rem var(--disp)}
+@media (prefers-reduced-motion:reduce){.threads path{animation:none;stroke-dashoffset:0}html{scroll-behavior:auto}}
+body[data-view="menu"] [data-page="home"],body[data-view="home"] [data-page="menu"]{display:none}
+nav a[aria-current="page"]{text-decoration:underline;text-underline-offset:6px}
+
+.hero h1{animation:rise 1s cubic-bezier(.2,.9,.3,1.2) both}
+@keyframes rise{from{opacity:0;transform:translateY(40px) scale(.85)}}
+.cup{display:block;margin:0 auto 4px;width:84px;height:auto}
+.steam path{fill:none;stroke:var(--crocus);stroke-width:3;stroke-linecap:round;opacity:0;animation:steam 2.6s ease-in-out infinite}
+.steam path:nth-child(2){animation-delay:.8s}.steam path:nth-child(3){animation-delay:1.6s}
+@keyframes steam{0%{opacity:0;transform:translateY(8px)}40%{opacity:.85}100%{opacity:0;transform:translateY(-14px)}}
+.marquee{background:var(--crocus);color:var(--saffron);overflow:hidden;direction:ltr;white-space:nowrap;padding:14px 0;font:700 1.45rem var(--disp)}
+.marquee div{display:inline-block;animation:slide 30s linear infinite}
+.marquee span{margin:0 22px}
+@keyframes slide{to{transform:translateX(-50%)}}
+.rv{opacity:0;transform:translateY(26px);transition:opacity .7s ease,transform .7s ease}
+.rv.in{opacity:1;transform:none}
+.btn{transition:transform .25s,background .25s,color .25s}
+.btn:hover{transform:translateY(-3px) scale(1.03)}
+.tab{transition:transform .2s,background .2s}.tab:hover{transform:translateY(-2px)}
+.menu.on .item{animation:pop .5s ease backwards}
+.menu.on .item:nth-child(2){animation-delay:.06s}.menu.on .item:nth-child(3){animation-delay:.12s}.menu.on .item:nth-child(4){animation-delay:.18s}.menu.on .item:nth-child(5){animation-delay:.24s}.menu.on .item:nth-child(6){animation-delay:.3s}
+@keyframes pop{from{opacity:0;transform:translateY(16px)}}
+.item{transition:transform .25s,background .25s;border-radius:8px}
+.item:hover{transform:translateX(-8px);background:color-mix(in srgb,var(--saffron) 16%,transparent)}
+.item .price{transition:transform .25s}.item:hover .price{transform:scale(1.15)}
+.card{transition:transform .3s,box-shadow .3s}
+.card:hover{transform:translateY(-6px);box-shadow:0 14px 30px rgba(75,42,107,.22)}
+.logo{transition:transform .3s}.logo:hover{transform:rotate(-4deg) scale(1.08)}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.rv{opacity:1;transform:none}.threads path{stroke-dashoffset:0!important}.steam path{opacity:.7}}
+.threads{overflow:visible}
+.threads path{transform-box:fill-box;transform-origin:center;animation:draw 2.4s ease-out .3s forwards,sway 3.6s ease-in-out 2.7s infinite alternate}
+.threads path:nth-child(2){animation:draw 2.4s ease-out .6s forwards,sway 4.4s ease-in-out 3s infinite alternate-reverse}
+.threads path:nth-child(3){animation:draw 2.4s ease-out .9s forwards,sway 5.2s ease-in-out 3.3s infinite alternate}
+@keyframes sway{0%{transform:translate(0,0) scale(1,1)}100%{transform:translate(-16px,-10px) scale(1.04,1.8)}}
+.threads{overflow:hidden}
+.threads path,.threads path:nth-child(2),.threads path:nth-child(3){stroke-dasharray:none;stroke-dashoffset:0;stroke-width:3;animation:flow 14s linear infinite}
+.threads path:nth-child(2){animation-duration:10s}
+.threads path:nth-child(3){animation-duration:7s}
+@keyframes flow{from{transform:translateX(-1200px)}to{transform:translateX(0)}}
+</style>
+</head>
+<body data-view="home">
+<header><div class="wrap"><a class="logo" href="#top">زعفران</a>
+<nav><a href="#menu">المنيو</a><a href="#story">قصتنا</a><a href="#visit">زيارتنا</a></nav></div></header>
+
+<main id="top">
+<div class="hero" data-page="home">
+  <div class="wrap">
+    <svg class="cup" viewBox="0 0 100 94" aria-hidden="true"><g class="steam"><path d="M36 34c-6-8 6-12 0-20"/><path d="M50 34c-6-8 6-12 0-20"/><path d="M64 34c-6-8 6-12 0-20"/></g><path d="M22 44h56v14a24 24 0 0 1-24 24h-8a24 24 0 0 1-24-24z" fill="#4B2A6B"/><path d="M78 50h6a9 9 0 0 1 0 18h-8" fill="none" stroke="#4B2A6B" stroke-width="5" stroke-linecap="round"/><ellipse cx="50" cy="86" rx="38" ry="4" fill="#C2282F"/></svg>
+    <h1>زعفران</h1>
+    <p>قهوة مختصة وحلويات تُحضَّر كل صباح، وخيوط زعفران تجعل كل فنجان مختلفاً.</p>
+    <a class="btn fill" href="#menu">تصفّح المنيو</a><a class="btn line" href="#visit">احجز طاولة</a>
+  </div>
+  <svg class="threads" viewBox="0 0 1200 60" preserveAspectRatio="none" aria-hidden="true"><path d="M0 30q150 -24 300 0q150 24 300 0q150 -24 300 0q150 24 300 0q150 -24 300 0q150 24 300 0q150 -24 300 0q150 24 300 0"/><path d="M0 36q100 -20 200 0q100 20 200 0q100 -20 200 0q100 20 200 0q100 -20 200 0q100 20 200 0q100 -20 200 0q100 20 200 0q100 -20 200 0q100 20 200 0q100 -20 200 0q100 20 200 0"/><path d="M0 24q75 -28 150 0q75 28 150 0q75 -28 150 0q75 28 150 0q75 -28 150 0q75 28 150 0q75 -28 150 0q75 28 150 0q75 -28 150 0q75 28 150 0q75 -28 150 0q75 28 150 0q75 -28 150 0q75 28 150 0q75 -28 150 0q75 28 150 0"/></svg>
+</div>
+
+<div class="marquee" data-page="home" aria-hidden="true"><div><span>قهوة مختصة</span><span>✦</span><span>حلويات طازجة</span><span>✦</span><span>خيوط زعفران</span><span>✦</span><span>أوقات هادئة</span><span>✦</span><span>تحميص يومي</span><span>✦</span><span>قهوة مختصة</span><span>✦</span><span>حلويات طازجة</span><span>✦</span><span>خيوط زعفران</span><span>✦</span><span>أوقات هادئة</span><span>✦</span><span>تحميص يومي</span><span>✦</span></div></div>
+
+<section id="menu" data-page="menu"><div class="wrap">
+  <h2>المنيو</h2><p class="sub">نحمّص حبوبنا بأنفسنا، ونحضّر كل طلب عند الطلب.</p>
+  <div class="tabs" role="tablist">
+    <button class="tab" role="tab" aria-selected="true" data-t="coffee">القهوة</button>
+    <button class="tab" role="tab" aria-selected="false" data-t="cold">المشروبات الباردة</button>
+    <button class="tab" role="tab" aria-selected="false" data-t="sweet">الحلويات</button>
+    <button class="tab" role="tab" aria-selected="false" data-t="food">المأكولات</button>
+  </div>
+  <div class="menu on" id="coffee">
+    <div class="item"><div class="row">لاتيه الزعفران<i></i><span class="price">5,500 د.ع</span></div><small>إسبريسو، حليب مبخّر، خيوط زعفران وعسل</small></div>
+    <div class="item"><div class="row">قهوة مقطّرة V60<i></i><span class="price">5,000 د.ع</span></div><small>حبوب الشهر، تُحضَّر أمامك</small></div>
+    <div class="item"><div class="row">إسبريسو مزدوج<i></i><span class="price">3,500 د.ع</span></div><small>تحميص متوسط، نكهة شوكولاتة داكنة</small></div>
+    <div class="item"><div class="row">كابتشينو<i></i><span class="price">4,500 د.ع</span></div><small>رغوة كثيفة وقوام مخملي</small></div>
+    <div class="item"><div class="row">قهوة عربية بالهيل<i></i><span class="price">4,000 د.ع</span></div><small>تُقدَّم مع تمر</small></div>
+    <div class="item"><div class="row">شاي الزعفران المثلّج<i></i><span class="price">5,000 د.ع</span></div><small>شاي أسود، زعفران، ليمون ونعناع</small></div>
+  </div>
+  <div class="menu" id="cold">
+    <div class="item"><div class="row">آيس لاتيه<i></i><span class="price">5,500 د.ع</span></div><small>إسبريسو وحليب بارد مع الثلج</small></div>
+    <div class="item"><div class="row">آيس أمريكانو<i></i><span class="price">4,500 د.ع</span></div><small>إسبريسو مضاعف وماء مثلّج</small></div>
+    <div class="item"><div class="row">كولد برو<i></i><span class="price">5,500 د.ع</span></div><small>قهوة منقوعة 18 ساعة على البارد</small></div>
+    <div class="item"><div class="row">موهيتو الليمون والنعناع<i></i><span class="price">4,500 د.ع</span></div><small>ليمون طازج ونعناع وصودا</small></div>
+    <div class="item"><div class="row">عصير برتقال طبيعي<i></i><span class="price">4,000 د.ع</span></div><small>يُعصر عند الطلب</small></div>
+    <div class="item"><div class="row">سموذي الفراولة<i></i><span class="price">5,500 د.ع</span></div><small>فراولة وزبادي وعسل</small></div>
+  </div>
+  <div class="menu" id="sweet">
+    <div class="item"><div class="row">كيك الزعفران والفستق<i></i><span class="price">6,500 د.ع</span></div><small>إسفنج ناعم وكريمة خفيفة</small></div>
+    <div class="item"><div class="row">أم علي<i></i><span class="price">6,000 د.ع</span></div><small>تُخبز عند الطلب</small></div>
+    <div class="item"><div class="row">كرواسان باللوز<i></i><span class="price">4,500 د.ع</span></div><small>مخبوز كل صباح</small></div>
+    <div class="item"><div class="row">تشيز كيك الورد<i></i><span class="price">7,000 د.ع</span></div><small>قاعدة بسكويت وصلصة توت</small></div>
+  </div>
+  <div class="menu" id="food">
+    <div class="item"><div class="row">شكشوكة<i></i><span class="price">8,000 د.ع</span></div><small>بيض، طماطم مشوية، خبز طازج</small></div>
+    <div class="item"><div class="row">ساندويتش حلومي<i></i><span class="price">7,500 د.ع</span></div><small>جبنة حلوم، طماطم، عسل وزعتر</small></div>
+    <div class="item"><div class="row">توست الأفوكادو<i></i><span class="price">7,500 د.ع</span></div><small>خبز العجين المخمّر وبيضة مسلوقة</small></div>
+    <div class="item"><div class="row">سلطة الجرجير والرمان<i></i><span class="price">7,000 د.ع</span></div><small>جبنة بيضاء وصلصة دبس الرمان</small></div>
+  </div>
+</div></section>
+
+<section class="story" id="story" data-page="home"><div class="wrap cols">
+  <div>
+    <h2>قصتنا</h2>
+    <p>الزعفران من أغلى التوابل في العالم، فهو يُقطف باليد من زهرة الكروكس، وتُجمع كل خيوطه واحدة واحدة.</p>
+    <p>بنينا زعفران على الفكرة نفسها: عناية بالتفاصيل الصغيرة، ومكوّنات نختارها بأنفسنا، ومكان تجلس فيه ولا تشعر بالوقت.</p>
+  </div>
+  <p class="quote">فنجان واحد، وخيط زعفران واحد، ووقت تأخذه لنفسك.</p>
+</div></section>
+
+<section id="visit" data-page="home"><div class="wrap">
+  <h2>زيارتنا</h2><p class="sub">نسعد باستقبالك، ويمكنك حجز طاولة مسبقاً.</p>
+  <div class="info">
+    <div class="card">
+      <h3>ساعات العمل</h3>
+      <div class="hours"><span>السبت – الأربعاء</span><span>7:00 ص – 12:00 م</span></div>
+      <div class="hours"><span>الخميس – الجمعة</span><span>7:00 ص – 2:00 ص</span></div>
+      <h3 style="margin-top:24px">العنوان</h3>
+      <p>شارع يا حسين، الناصرية<br><span dir="ltr">+964 770 000 0000</span></p>
+    </div>
+    <div class="card">
+      <h3>احجز طاولة</h3>
+      <label for="n">الاسم</label><input id="n" autocomplete="name">
+      <div class="two">
+        <div><label for="d">التاريخ</label><input id="d" type="date"></div>
+        <div><label for="g">عدد الأشخاص</label><select id="g"><option>1</option><option selected>2</option><option>3</option><option>4</option><option>5</option><option>6+</option></select></div>
+      </div>
+      <button class="btn fill" id="go" style="margin-top:18px;width:100%">أكّد الحجز</button>
+      <p id="ok" role="status"></p>
+    </div>
+  </div>
+</div></section>
+</main>
+
+<footer><b>زعفران</b><p>قهوة وحلويات وأوقات هادئة</p></footer>
+
+<script>
+document.querySelectorAll('.tab').forEach(function(b){
+  b.addEventListener('click',function(){
+    document.querySelectorAll('.tab').forEach(function(x){x.setAttribute('aria-selected',x===b)});
+    document.querySelectorAll('.menu').forEach(function(m){m.classList.toggle('on',m.id===b.dataset.t)});
+  });
+});
+document.getElementById('go').addEventListener('click',function(){
+  var n=document.getElementById('n').value.trim(),d=document.getElementById('d').value,o=document.getElementById('ok');
+  o.textContent=(!n||!d)?'اكتب اسمك واختر التاريخ لإتمام الحجز.':'شكراً '+n+'، سجّلنا طلب حجزك وسنؤكده معك قريباً.';
+});
+function route(){
+  var h=location.hash.slice(1),v=h==='menu'?'menu':'home';
+  document.body.dataset.view=v;
+  document.title=v==='menu'?'المنيو | زعفران':'زعفران | كافيه';
+  document.querySelector('nav a[href="#menu"]').setAttribute('aria-current',v==='menu'?'page':'false');
+  var e=v==='home'&&h&&h!=='top'?document.getElementById(h):null;
+  if(e)e.scrollIntoView();else window.scrollTo(0,0);
+}
+window.addEventListener('hashchange',route);route();
+
+var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.12});
+document.querySelectorAll('h2,.sub,.card,.story .cols>*').forEach(function(el){el.classList.add('rv');io.observe(el)});
+</script>
+</body>
+</html>
